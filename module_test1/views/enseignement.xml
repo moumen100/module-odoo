@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    
+<!-- Tree , form, search ,Kanban,  -->
+
+<!-- Vue Cours-->
+        <record id="cours_form_id" model="ir.ui.view">
+                    <field name="name">Cours formulaire</field>
+                    <field name="model">cours</field>     
+                    <field name="arch" type="xml">
+                        <form name="cours ">
+                            <header>
+                            <button name="print_cour" string="Print" type="object" class="btn-primary"/>
+                            </header>
+                            <group string ="Informations cours">
+                                <field name="name"/>
+                                <field name="niveau"/>
+                                <field name="nb_chapitre"/>
+                                <field name="coef"/>
+                                <field name="dure"/>
+                                <field name="date"/>
+                            </group>
+                            <!-- <field name="ens_ids">
+                            </field> -->
+                            <notebook>
+                                <page string="Liste des enseignants">
+                                    <field name="ens_ids">
+                                        <tree string="Liste des enseignants" editable="bottom">
+                                            <field name="name"/>
+                                            <field name="prenom"/>
+                                            <field name="adresse"/>
+                                            <field name="grade"/>                                        
+                                        </tree>
+                                    </field>
+                                </page>
+                                <page string="Informations complémentaire">
+                                    <group>
+                                        <field name="pre_required"/>
+                                        <field name="goals"/>
+                                        <field name="logistics"/>
+                                        <field name="deroulement"/>
+                                        <field name="prologement"/>
+                                        <field name="comment"/>
+                                    </group>
+                                </page>
+                            </notebook>
+                        </form>                           
+                    </field>
+                          
+
+        </record>
+        <record id="cours_tree_id" model="ir.ui.view">
+                    <field name="name">Cours liste</field>
+                    <field name="model">cours</field>     
+                    <field name="arch" type="xml">
+                        <tree name="cours ">
+                            <field name="name"/>
+                            <field name="niveau"/>
+                        </tree>    
+                           
+                    </field>
+        </record>
+
+
+
+
+        <record id="action_cours_id" model="ir.actions.act_window">
+            <field name="name">Cours</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">cours</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">tree,form</field>
+            
+        </record>
+
+ <menuitem  name="Enseignement" id="menu_module_test1_root"
+             
+            sequence="13"/>
+
+   <menuitem action="action_cours_id" name="Cours"
+            id="menu_cours" parent="menu_module_test1_root"
+            sequence="15"/>
+
+
+
+<!-- VUE ENSEIGNANT   
+         
+
+
+
+ <menuitem name="Sales"
+            id="sales_team.menu_base_partner"
+            web_icon="sale,static/description/icon.png"/>
+-->
+
+
+        <record id="enseignant_form_id" model="ir.ui.view">
+                    <field name="name">Enseignant Formulaire</field>
+                    <field name="model">enseignant</field>     
+                    <field name="arch" type="xml">
+                        <form name="Enseignant">
+                            <header>
+                                <button name="action_promote" string="Promouvoir" class="o_sale_confirm" type="object" />
+                                <button name="action_leave" string="Démission" class="o_sale_confirm" type="object" />
+                                <field name="grade" widget="statusbar"/>
+                            </header>
+                            <group string ="Informations Enseignant">
+                                <field name="name"/>
+                                <field name="prenom"/>
+                                <field name="adresse"/>
+                                <field name="cour_id"/>
+                                <field name="contrat"/>
+                                <field name="diplome"/>
+                                <!-- <field name="grade"/> -->
+                            </group>                        
+                        </form>    
+                    </field>
+                
+        </record>
+         <record id="enseignant_tree_id" model="ir.ui.view">
+                    <field name="name">Enseignant Tree</field>
+                    <field name="model">enseignant</field>     
+                    <field name="arch" type="xml">
+
+                        <tree name="Enseignant Liste ">       
+                                <field name="name"/>
+                                <field name="prenom"/>
+                                <field name="grade"/>
+                                <field name="cour_id"/>
+                                <field name="adresse"/>
+                        </tree>    
+                                           
+                    </field>    
+        </record>
+
+
+
+
+        <record id="action_enseignant_id" model="ir.actions.act_window">
+            <field name="name">Enseignant</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">enseignant</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">tree,form</field>       
+        </record>
+
+
+        <menuitem action="action_enseignant_id" name="Enseignant"
+            id="menu_enseignant" parent="menu_module_test1_root"
+            sequence="14"/>
+       
+
+    
+
+
+
+       
+
+
+
+           
+
+</odoo>

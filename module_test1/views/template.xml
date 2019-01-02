@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        
+        <!-- <template id="report_cours_header">
+            <div>
+                <center><h1>Fiche pédagogique</h1></center>
+            </div>
+        </template> -->
+        <!-- <template id="report_enseignant_document">
+            <t t-call="report.html_container">
+                <t t-foreach="docs" t-as="ens">
+                    <t t-call="module_test1.report_cours_header">
+                <div class="page">              
+                        <div>
+                            <p> Matière: <span t-field="ens.cour_id.name"/></p>
+                            <p> Niveau:  <span  t-field="ens.cour_id.niveau" ></span> </p>
+                            <p> Près requis :  <span  t-field="ens.cour_id.pre_required" ></span> </p>
+                        </div>
+                        <div>
+                            <h4> Objectifs pédagogique </h4>
+                            <p> <span  t-field="ens.cour_id.goals" ></span></p>
+                        </div>
+                        <div>
+                            <h4> Moyens et Matériels nécessaire </h4>
+                            <p> <span  t-field="ens.cour_id.logistics" ></span></p>
+                        </div>
+                        <div>
+                            <h4> Déroulement du cours </h4>
+                            <p> <span  t-field="ens.cour_id.deroulement" ></span></p>
+                        </div>
+                        <div>
+                            <h4> Prolongement du cours </h4>
+                            <p> <span  t-field="ens.cour_id.prologement" ></span></p>
+                        </div>
+                        <div>
+                            <h4> Comentaires </h4>
+                            <p> <span  t-field="ens.cour_id.comment" ></span></p>
+                        </div>
+                        <div>
+                            <h4> Auteur </h4>
+                            <p> <span  t-field="ens.name" ></span></p>
+                        </div>
+                        <div>
+                            <h4> Date </h4>
+                            <p> <span  t-field="ens.cour_id.date" ></span></p>
+                        </div>
+                        
+                </div>
+                
+                
+            </t>
+                </t>
+            </t>
+        </template>
+
+        <template id="report_cours_document">
+            <t t-call="report.html_container">
+                <t t-foreach="docs" t-as="cou">
+                    <t t-call="report.external_layout">
+                <div class="page"> 
+                        <center><h1>Fiche pédagogique</h1></center>
+             
+                        <div>
+                            <p> Matière: <span t-field="cou.name"/></p>
+                            <p> Niveau:  <span  t-field="cou.niveau" ></span> </p>
+                            <p> Près requis:  <span  t-field="cou.pre_required" ></span> </p>
+                        </div>
+                        <div>
+                            <h4> Objectifs pédagogique </h4>
+                            <p> <span  t-field="cou.goals" ></span></p>
+                        </div>
+                        <div>
+                            <h4> Moyens et Matériels nécessaire </h4>
+                            <p> <span  t-field="cou.logistics" ></span></p>
+                        </div>
+                        <div>
+                            <h4> Déroulement du cours </h4>
+                            <p> <span  t-field="cou.deroulement" ></span></p>
+                        </div>
+                        <div>
+                            <h4> Prolongement du cours </h4>
+                            <p> <span  t-field="cou.prologement" ></span></p>
+                        </div>
+                        <div>
+                            <h4> Comentaires </h4>
+                            <p> <span  t-field="cou.comment" ></span></p>
+                        </div>
+                        <div>
+                            <table class="table table-bordered" style="border-color:red;">
+                            <tr>
+                                <th>Nom</th>
+                                <th>Prenom</th>
+                                <th>Adresse</th>
+                                <th>Grade</th>
+                            </tr>
+                                <t t-foreach="cou.ens_ids" t-as="ens">
+                                    <tr>
+                                        <td><span t-field="ens.name"></span></td>
+                                        <td><span t-field="ens.prenom"></span></td>
+                                        <td><span t-field="ens.grade"></span></td>
+                                        <td><span t-field="ens.adresse"></span></td>
+                                    </tr>
+                                </t>
+                            </table>
+                        </div>
+                        <div>
+                            <h4> Date </h4>
+                            <p> <span  t-field="cou.date" ></span></p>
+                        </div>
+                        
+                </div>
+                
+                
+            </t>
+                </t>
+            </t>
+        </template> -->
+    </data>
+</odoo>

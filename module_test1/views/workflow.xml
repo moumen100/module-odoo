@@ -1,0 +1,10 @@
+<odoo>
+    <data>
+    <record id="grade_workflow" model="workflow">
+    <field name="name">grade.workflow</field>
+    <field name="osv">enseignant</field>
+    <field name="on_create">True</field>
+</record>
+
+    </data>
+</odoo>

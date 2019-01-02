@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <!-- <report 
+            id="report_cours"
+            string="Fiche Pédagogique"
+            model="cours" 
+            report_type="qweb-pdf"
+            file="module_test1.report_cours_document" 
+            name="module_test1.report_cours_document" 
+        />
+        <report 
+            id="report_enseignant"
+            string="Fiche Pédagogique"
+            model="enseignant" 
+            report_type="qweb-pdf"
+            file="module_test1.report_enseignant_document" 
+            name="module_test1.report_enseignant_document" 
+        /> -->
+    </data>
+</odoo>

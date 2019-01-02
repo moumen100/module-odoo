@@ -1,0 +1,15 @@
+<odoo>
+    <data> 
+      <record id="inherit_view_product_template_article" model="ir.ui.view">
+      <field name="name">articles</field>
+      <field name="model">articles</field>
+      <field name="inherit_id" ref="product.product_template_only_form_view"/>
+      <field name="arch" type="xml">
+          <xpath expr="//field[@name='name']" position="after">
+            <label for="Article" string="Article">Article</label>
+            <field name="isarticle" string="Article"/>
+          </xpath>
+      </field>
+    </record>
+    </data>
+</odoo>
